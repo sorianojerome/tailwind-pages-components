@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tailwind Pages and Components</title>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-neutral-950 dark:text-white flex justify-center">
+    <!-- Mobile container -->
+    <div
+        class="w-full max-w-sm min-h-screen flex flex-col relative border-x border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+        <!-- AppBar -->
+        <header
+            class="flex items-center justify-between px-2 h-12 border-b border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+            <!-- Left: Back Button -->
+            <div class="w-10 flex justify-start">
+                <button onclick="window.history.back()"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none">
+                    <span
+                        class="material-icons text-gray-700 dark:text-gray-200 text-base leading-none">arrow_back</span>
+                </button>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="flex-1 text-center text-base font-semibold text-gray-800 dark:text-gray-100">
+                Bottom Navigation
+            </h1>
+
+            <!-- Right: Empty placeholder (for symmetry, e.g. actions later) -->
+            <div class="w-10"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 pb-32 sm:pb-4">
+
+            <!-- Empty Frame -->
+            <div
+                class="flex items-center justify-center w-full h-[800px] border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg">
+                <span class="text-gray-500 dark:text-gray-400 text-sm">Your content goes here</span>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <nav class="fixed bottom-0 inset-x-0 z-50">
+                <div class="mx-auto w-full max-w-sm">
+                    <div class="
+                        relative
+                        rounded-t-2xl border border-gray-200 dark:border-neutral-800
+                        bg-white/90 dark:bg-neutral-900/80
+                        backdrop-blur supports-[backdrop-filter]:bg-white/70
+                        dark:supports-[backdrop-filter]:bg-neutral-900/60
+                        shadow-[0_-4px_20px_rgba(0,0,0,0.06)]
+                        px-3 py-2
+                        pb-[calc(0.5rem+env(safe-area-inset-bottom))]
+                    ">
+                        <ul class="grid grid-cols-5 grid-rows-2 gap-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">home</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Home</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">search</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Search</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">add_circle</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Create</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">notifications</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Alerts</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">person</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Profile</span>
+                                </a>
+                            </li>
+                            <!-- Second row -->
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">favorite</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Likes</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">message</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Messages</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">settings</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Settings</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">help</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">Help</span>
+                                </a>
+                            </li>
+                            <li class="flex justify-center">
+                                <a href="#" class="flex flex-col items-center py-2">
+                                    <span class="material-icons">info</span>
+                                    <span class="text-[11px] md:text-xs font-medium tracking-wide">About</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </main>
+
+    </div>
+</body>

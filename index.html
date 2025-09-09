@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tailwind Pages and Components</title>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-neutral-950 dark:text-white flex justify-center">
+    <!-- Mobile container -->
+    <div
+        class="w-full max-w-sm min-h-screen flex flex-col relative border-x border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+        <!-- AppBar -->
+        <header
+            class="flex items-center justify-between px-2 h-12 border-b border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+            <!-- Left: Back Button -->
+            <div class="w-10"></div>
+            <!-- <div class="w-10 flex justify-start">
+                <button onclick="window.history.back()"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none">
+                    <span
+                        class="material-icons text-gray-700 dark:text-gray-200 text-base leading-none">arrow_back</span>
+                </button>
+            </div> -->
+
+            <!-- Center: Title -->
+            <h1 class="flex-1 text-center text-base font-semibold text-gray-800 dark:text-gray-100">
+                Tailwind Pages and Components
+            </h1>
+
+            <!-- Right: Empty placeholder (for symmetry, e.g. actions later) -->
+            <div class="w-10"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 pb-32 sm:pb-4">
+            <!-- Enter contents here -->
+            <section class="mt-2 space-y-6">
+                <!-- Heading -->
+                <div class="text-center px-4">
+                    <!-- <h2 class="text-lg font-semibold">Tailwind Pages and Components</h2> -->
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        A collection of <span class="italic font-bold">mobile-first UI pages and components</span> built
+                        with
+                        Tailwind CSS.<br>
+                        Designed for <span class="italic font-bold">mobile app layouts</span> with a fixed mobile width,
+                        making it
+                        easy to build mobile apps, PWAs, or responsive prototypes. Using <span
+                            class="italic font-bold">google material icons</span>.
+                    </p>
+                </div>
+
+                <!-- Templates Panel -->
+                <div class="border border-gray-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+                    <div
+                        class="px-3 py-2 bg-gray-50 dark:bg-neutral-800 border-b border-gray-200 dark:border-neutral-700">
+                        <h3 class="text-sm font-medium text-green-600 dark:text-green-400">Template</h3>
+                    </div>
+                    <div class="p-2 space-y-2">
+                        <a href="empty-template.html"
+                            class="block w-full px-3 py-2 rounded-md bg-green-600 text-white text-sm font-medium text-center hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400">
+                            Empty Template
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pages Panel -->
+                <div class="border border-gray-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+                    <div
+                        class="px-3 py-2 bg-gray-50 dark:bg-neutral-800 border-b border-gray-200 dark:border-neutral-700">
+                        <h3 class="text-sm font-medium text-purple-600 dark:text-purple-400">Pages</h3>
+                    </div>
+                    <div class="p-2 space-y-2">
+                        <a href="#"
+                            class="block w-full px-3 py-2 rounded-md bg-purple-600 text-white text-sm font-medium text-center hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                            Login
+                        </a>
+                        <a href="#"
+                            class="block w-full px-3 py-2 rounded-md bg-purple-600 text-white text-sm font-medium text-center hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                            Register
+                        </a>
+                        <a href="#"
+                            class="block w-full px-3 py-2 rounded-md bg-purple-600 text-white text-sm font-medium text-center hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                            Reset Password
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Components Panel -->
+                <div class="border border-gray-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+                    <div
+                        class="px-3 py-2 bg-gray-50 dark:bg-neutral-800 border-b border-gray-200 dark:border-neutral-700">
+                        <h3 class="text-sm font-medium text-blue-600 dark:text-blue-400">Components</h3>
+                    </div>
+                    <div class="p-2 space-y-2">
+                        <a href="#"
+                            class="block w-full px-3 py-2 rounded-md bg-blue-600 text-white text-sm font-medium text-center hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            Accordion
+                        </a>
+                        <a href="#"
+                            class="block w-full px-3 py-2 rounded-md bg-blue-600 text-white text-sm font-medium text-center hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            Button
+                        </a>
+                        <a href="#"
+                            class="block w-full px-3 py-2 rounded-md bg-blue-600 text-white text-sm font-medium text-center hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            Dropdown
+                        </a>
+                        <a href="bottom-navigation.html"
+                            class="block w-full px-3 py-2 rounded-md bg-blue-600 text-white text-sm font-medium text-center hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">Bottom
+                            Navigation</a>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sections Panel -->
+                <div class="border border-gray-200 dark:border-neutral-800 rounded-lg overflow-hidden">
+                    <div
+                        class="px-3 py-2 bg-gray-50 dark:bg-neutral-800 border-b border-gray-200 dark:border-neutral-700">
+                        <h3 class="text-sm font-medium text-orange-600 dark:text-orange-400">Template</h3>
+                    </div>
+                    <div class="p-2 space-y-2">
+                        <a href="profile-covers.html"
+                            class="block w-full px-3 py-2 rounded-md bg-orange-600 text-white text-sm font-medium text-center hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400">
+                            Profile with Cover Image
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
