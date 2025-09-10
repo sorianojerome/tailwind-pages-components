@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Tailwind Pages and Components</title>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-neutral-950 dark:text-white flex justify-center">
+    <!-- Mobile container -->
+    <div
+        class="w-full max-w-sm min-h-screen flex flex-col relative border-x border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+        <!-- AppBar -->
+        <header
+            class="flex items-center justify-between px-2 h-12 border-b border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+            <!-- Left: Back Button -->
+            <div class="w-10 flex justify-start">
+                <button onclick="window.history.back()"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none">
+                    <span
+                        class="material-icons text-gray-700 dark:text-gray-200 text-base leading-none">arrow_back</span>
+                </button>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="flex-1 text-center text-base font-semibold text-gray-800 dark:text-gray-100">
+                Components - Accordion
+            </h1>
+
+            <!-- Right: Empty placeholder -->
+            <div class="w-10"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 pb-32 sm:pb-4 space-y-6">
+            <!-- Section: Accordion (Single Open) -->
+            <section>
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Accordion (Single Open)</h2>
+                <div x-data="{ open: 1 }" class="space-y-2">
+                    <!-- Item 1 -->
+                    <div class="border border-gray-200 dark:border-neutral-700 rounded-lg overflow-hidden">
+                        <button @click="open = open === 1 ? null : 1"
+                            class="w-full flex justify-between items-center px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700 focus:outline-none">
+                            <span>Accordion Item #1</span>
+                            <span
+                                class="material-icons text-gray-500 dark:text-gray-400 transform transition-transform duration-200"
+                                :class="{ 'rotate-180': open === 1 }">expand_more</span>
+                        </button>
+                        <div x-show="open === 1" x-collapse class="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">
+                            This is the body of accordion item #1.
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="border border-gray-200 dark:border-neutral-700 rounded-lg overflow-hidden">
+                        <button @click="open = open === 2 ? null : 2"
+                            class="w-full flex justify-between items-center px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700 focus:outline-none">
+                            <span>Accordion Item #2</span>
+                            <span
+                                class="material-icons text-gray-500 dark:text-gray-400 transform transition-transform duration-200"
+                                :class="{ 'rotate-180': open === 2 }">expand_more</span>
+                        </button>
+                        <div x-show="open === 2" x-collapse class="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">
+                            This is the body of accordion item #2.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Accordion (Multiple Open) -->
+            <section>
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Accordion (Multiple Open)</h2>
+                <div class="space-y-2">
+                    <!-- Item 1 -->
+                    <div x-data="{ open: false }"
+                        class="border border-gray-200 dark:border-neutral-700 rounded-lg overflow-hidden">
+                        <button @click="open = !open"
+                            class="w-full flex justify-between items-center px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700 focus:outline-none">
+                            <span>Accordion Item #1</span>
+                            <span
+                                class="material-icons text-gray-500 dark:text-gray-400 transform transition-transform duration-200"
+                                :class="{ 'rotate-180': open }">expand_more</span>
+                        </button>
+                        <div x-show="open" x-collapse class="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">
+                            This is the body of accordion item #1.
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div x-data="{ open: false }"
+                        class="border border-gray-200 dark:border-neutral-700 rounded-lg overflow-hidden">
+                        <button @click="open = !open"
+                            class="w-full flex justify-between items-center px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700 focus:outline-none">
+                            <span>Accordion Item #2</span>
+                            <span
+                                class="material-icons text-gray-500 dark:text-gray-400 transform transition-transform duration-200"
+                                :class="{ 'rotate-180': open }">expand_more</span>
+                        </button>
+                        <div x-show="open" x-collapse class="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">
+                            This is the body of accordion item #2.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Accordion (Colored Open State) -->
+            <section>
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Accordion (Colored Open State)
+                </h2>
+                <div class="space-y-2">
+                    <!-- Item 1 -->
+                    <div x-data="{ open: false }"
+                        class="border border-gray-200 dark:border-neutral-700 rounded-lg overflow-hidden">
+                        <button @click="open = !open"
+                            :class="open ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300' : 'bg-gray-50 dark:bg-neutral-800 text-gray-800 dark:text-gray-200'"
+                            class="w-full flex justify-between items-center px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-neutral-700 focus:outline-none">
+                            <span>Accordion Item #1</span>
+                            <span class="material-icons transform transition-transform duration-200"
+                                :class="open ? 'rotate-180 text-blue-600 dark:text-blue-300' : 'text-gray-500 dark:text-gray-400'">expand_more</span>
+                        </button>
+                        <div x-show="open" x-collapse class="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">
+                            This is the body of accordion item #1.
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div x-data="{ open: false }"
+                        class="border border-gray-200 dark:border-neutral-700 rounded-lg overflow-hidden">
+                        <button @click="open = !open"
+                            :class="open ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300' : 'bg-gray-50 dark:bg-neutral-800 text-gray-800 dark:text-gray-200'"
+                            class="w-full flex justify-between items-center px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-neutral-700 focus:outline-none">
+                            <span>Accordion Item #2</span>
+                            <span class="material-icons transform transition-transform duration-200"
+                                :class="open ? 'rotate-180 text-blue-600 dark:text-blue-300' : 'text-gray-500 dark:text-gray-400'">expand_more</span>
+                        </button>
+                        <div x-show="open" x-collapse class="px-4 py-2 text-sm text-gray-600 dark:text-gray-400">
+                            This is the body of accordion item #2.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</body>

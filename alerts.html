@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Tailwind Pages and Components</title>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-neutral-950 dark:text-white flex justify-center">
+    <!-- Mobile container -->
+    <div
+        class="w-full max-w-sm min-h-screen flex flex-col relative border-x border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+        <!-- AppBar -->
+        <header
+            class="flex items-center justify-between px-2 h-12 border-b border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+            <!-- Left: Back Button -->
+            <div class="w-10 flex justify-start">
+                <button onclick="window.history.back()"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none">
+                    <span
+                        class="material-icons text-gray-700 dark:text-gray-200 text-base leading-none">arrow_back</span>
+                </button>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="flex-1 text-center text-base font-semibold text-gray-800 dark:text-gray-100">
+                Components - Alerts
+            </h1>
+
+            <!-- Right: Empty placeholder (for symmetry, e.g. actions later) -->
+            <div class="w-10"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 pb-32 sm:pb-4 space-y-6">
+            <!-- Section: Alerts -->
+            <section>
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Alerts</h2>
+                <div class="space-y-2">
+                    <!-- Primary -->
+                    <div
+                        class="flex items-start gap-2 p-3 border border-blue-200 bg-blue-50 text-blue-800 rounded-md dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-200">
+                        <span class="material-icons text-blue-500 dark:text-blue-300">info</span>
+                        <p class="text-sm">This is a <strong>primary alert</strong> — check it out!</p>
+                    </div>
+
+                    <!-- Secondary -->
+                    <div
+                        class="flex items-start gap-2 p-3 border border-gray-300 bg-gray-50 text-gray-800 rounded-md dark:bg-neutral-800 dark:border-neutral-700 dark:text-gray-200">
+                        <span class="material-icons text-gray-500 dark:text-gray-300">info</span>
+                        <p class="text-sm">This is a <strong>secondary alert</strong> — check it out!</p>
+                    </div>
+
+                    <!-- Success -->
+                    <div
+                        class="flex items-start gap-2 p-3 border border-green-200 bg-green-50 text-green-800 rounded-md dark:bg-green-900/30 dark:border-green-800 dark:text-green-200">
+                        <span class="material-icons text-green-500 dark:text-green-300">check_circle</span>
+                        <p class="text-sm">This is a <strong>success alert</strong> — check it out!</p>
+                    </div>
+
+                    <!-- Warning -->
+                    <div
+                        class="flex items-start gap-2 p-3 border border-yellow-200 bg-yellow-50 text-yellow-800 rounded-md dark:bg-yellow-900/30 dark:border-yellow-800 dark:text-yellow-200">
+                        <span class="material-icons text-yellow-500 dark:text-yellow-300">warning</span>
+                        <p class="text-sm">This is a <strong>warning alert</strong> — check it out!</p>
+                    </div>
+
+                    <!-- Danger -->
+                    <div
+                        class="flex items-start gap-2 p-3 border border-red-200 bg-red-50 text-red-800 rounded-md dark:bg-red-900/30 dark:border-red-800 dark:text-red-200">
+                        <span class="material-icons text-red-500 dark:text-red-300">error</span>
+                        <p class="text-sm">This is a <strong>danger alert</strong> — check it out!</p>
+                    </div>
+
+                    <!-- Info -->
+                    <div
+                        class="flex items-start gap-2 p-3 border border-cyan-200 bg-cyan-50 text-cyan-800 rounded-md dark:bg-cyan-900/30 dark:border-cyan-800 dark:text-cyan-200">
+                        <span class="material-icons text-cyan-500 dark:text-cyan-300">info</span>
+                        <p class="text-sm">This is an <strong>info alert</strong> — check it out!</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Toast Notifications -->
+            <section x-data="{ toasts: [] }" class="space-y-3">
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Toast Alerts</h2>
+
+                <!-- Buttons -->
+                <div class="flex gap-2">
+                    <button @click="toasts.push({ id: Date.now(), type: 'info', message: 'Top snackbar alert!' });
+                     setTimeout(() => toasts.shift(), 5000)"
+                        class="flex-1 px-3 py-2 text-sm font-medium text-white rounded-md bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        Show Top Alert
+                    </button>
+                    <button @click="toasts.push({ id: Date.now(), type: 'success', message: 'Bottom snackbar alert!', bottom: true });
+                     setTimeout(() => toasts.shift(), 5000)"
+                        class="flex-1 px-3 py-2 text-sm font-medium text-white rounded-md bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400">
+                        Show Bottom Alert
+                    </button>
+                </div>
+
+                <!-- Toast Container (Top) -->
+                <div class="fixed top-4 inset-x-0 flex flex-col items-center space-y-2 z-50" aria-live="assertive">
+                    <template x-for="toast in toasts.filter(t => !t.bottom)" :key="toast.id">
+                        <div x-show="true" x-transition class="flex items-center gap-2 px-4 py-2 rounded-md shadow-md text-sm font-medium
+                       border bg-white text-gray-800 dark:bg-neutral-800 dark:text-gray-100">
+                            <span class="material-icons text-blue-500" x-show="toast.type === 'info'">info</span>
+                            <span class="material-icons text-green-500"
+                                x-show="toast.type === 'success'">check_circle</span>
+                            <p x-text="toast.message"></p>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Toast Container (Bottom) -->
+                <div class="fixed bottom-4 inset-x-0 flex flex-col items-center space-y-2 z-50" aria-live="assertive">
+                    <template x-for="toast in toasts.filter(t => t.bottom)" :key="toast.id">
+                        <div x-show="true" x-transition class="flex items-center gap-2 px-4 py-2 rounded-md shadow-md text-sm font-medium
+                       border bg-white text-gray-800 dark:bg-neutral-800 dark:text-gray-100">
+                            <span class="material-icons text-green-500">check_circle</span>
+                            <p x-text="toast.message"></p>
+                        </div>
+                    </template>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</body>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Tailwind Pages and Components</title>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-neutral-950 dark:text-white flex justify-center">
+    <!-- Mobile container -->
+    <div
+        class="w-full max-w-sm min-h-screen flex flex-col relative border-x border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+        <!-- AppBar -->
+        <header
+            class="flex items-center justify-between px-2 h-12 border-b border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+            <!-- Left: Back Button -->
+            <div class="w-10 flex justify-start">
+                <button onclick="window.history.back()"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none">
+                    <span
+                        class="material-icons text-gray-700 dark:text-gray-200 text-base leading-none">arrow_back</span>
+                </button>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="flex-1 text-center text-base font-semibold text-gray-800 dark:text-gray-100">
+                Components - Badges
+            </h1>
+
+            <!-- Right: Empty placeholder (for symmetry, e.g. actions later) -->
+            <div class="w-10"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 pb-32 sm:pb-4">
+            <!-- Section: Badges -->
+            <section class="space-y-4">
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Badges Examples</h2>
+
+                <h1 class="text-2xl font-bold">
+                    Example heading
+                    <span
+                        class="ml-2 px-2 py-0.5 text-xs font-medium rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                        New
+                    </span>
+                </h1>
+                <h2 class="text-xl font-semibold">
+                    Example heading
+                    <span
+                        class="ml-2 px-2 py-0.5 text-xs font-medium rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                        New
+                    </span>
+                </h2>
+                <h3 class="text-lg font-semibold">
+                    Example heading
+                    <span
+                        class="ml-2 px-2 py-0.5 text-xs font-medium rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                        New
+                    </span>
+                </h3>
+                <h4 class="text-base font-medium">
+                    Example heading
+                    <span
+                        class="ml-2 px-2 py-0.5 text-xs font-medium rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                        New
+                    </span>
+                </h4>
+                <h5 class="text-sm font-medium">
+                    Example heading
+                    <span
+                        class="ml-2 px-2 py-0.5 text-xs font-medium rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                        New
+                    </span>
+                </h5>
+                <h6 class="text-xs font-medium uppercase tracking-wide">
+                    Example heading
+                    <span
+                        class="ml-2 px-2 py-0.5 text-xs font-medium rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                        New
+                    </span>
+                </h6>
+            </section>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Badges in Buttons -->
+            <section class="mt-6 space-y-4">
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Badges in Buttons
+                </h2>
+
+                <!-- Button with badge -->
+                <button type="button"
+                    class="relative w-full flex items-center justify-between px-4 py-2 rounded-md bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    Notifications
+                    <span
+                        class="ml-2 inline-flex items-center justify-center px-2 py-0.5 text-xs font-medium leading-none rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                        4
+                    </span>
+                </button>
+            </section>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Positioned Badge in Button -->
+            <section class="mt-6 space-y-4">
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Positioned Badge in Button
+                </h2>
+
+                <!-- Button with positioned badge -->
+                <button type="button"
+                    class="relative inline-flex items-center px-4 py-2 rounded-md bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    Inbox
+                    <span
+                        class="absolute -top-2 -right-2 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-white bg-red-600 rounded-full">
+                        99+
+                    </span>
+                </button>
+            </section>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Dot Notification in Button -->
+            <section class="mt-6 space-y-4">
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Dot Notification in Button
+                </h2>
+
+                <!-- Button with dot badge -->
+                <button type="button"
+                    class="relative inline-flex items-center px-4 py-2 rounded-md bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    Profile
+                    <span
+                        class="absolute -top-1 -right-1 flex h-3 w-3 rounded-full bg-red-600 border-2 border-white dark:border-neutral-900">
+                        <span class="sr-only">New alerts</span>
+                    </span>
+                </button>
+            </section>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Color Badges -->
+            <section class="mt-6">
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Color Badges
+                </h2>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-blue-600 text-white">Primary</span>
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-gray-600 text-white">Secondary</span>
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-green-600 text-white">Success</span>
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-red-600 text-white">Danger</span>
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-yellow-400 text-gray-900">Warning</span>
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-cyan-500 text-white">Info</span>
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-gray-200 text-gray-800">Light</span>
+                    <span class="px-2 py-1 text-xs font-medium rounded bg-gray-900 text-white">Dark</span>
+                </div>
+            </section>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Pill Badges -->
+            <section class="mt-6">
+                <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                    Pill Badges
+                </h2>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-blue-600 text-white">Primary</span>
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-gray-600 text-white">Secondary</span>
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-green-600 text-white">Success</span>
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-red-600 text-white">Danger</span>
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-yellow-400 text-gray-900">Warning</span>
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-cyan-500 text-white">Info</span>
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-gray-200 text-gray-800">Light</span>
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-gray-900 text-white">Dark</span>
+                </div>
+            </section>
+
+
+        </main>
+
+    </div>
+</body>

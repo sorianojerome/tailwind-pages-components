@@ -33,27 +33,32 @@
 
             <!-- Center: Title -->
             <h1 class="flex-1 text-center text-base font-semibold text-gray-800 dark:text-gray-100">
-                Profile with Cover Image
+                Create Account
             </h1>
 
-            <!-- Right: Empty placeholder (for symmetry, e.g. actions later) -->
+            <!-- Right: Empty placeholder -->
             <div class="w-10"></div>
         </header>
 
         <!-- Main Content -->
         <main class="flex-1 p-4 pb-32 sm:pb-4">
-            <!-- Enter contents here -->
-            <!-- ✅ Login Form Section -->
             <section class="flex flex-col justify-center items-center h-full">
-                <!-- Logo -->
+                <!-- Icon & Intro -->
                 <div class="mb-6 text-center">
-                    <span class="material-icons text-purple-600 dark:text-purple-400 text-6xl">lock</span>
-                    <h1 class="text-xl font-bold mt-2">Welcome Back!</h1>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Login to continue</p>
+                    <span class="material-icons text-purple-600 dark:text-purple-400 text-6xl">person_add</span>
+                    <h1 class="text-xl font-bold mt-2">Join Us!</h1>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Create your account to get started</p>
                 </div>
 
-                <!-- Login Form -->
+                <!-- Registration Form -->
                 <form action="#" method="POST" class="w-full space-y-4">
+                    <!-- Name -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-1">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                    </div>
+
                     <!-- Email -->
                     <div>
                         <label for="email" class="block text-sm font-medium mb-1">Email</label>
@@ -68,20 +73,18 @@
                             class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:outline-none">
                     </div>
 
-                    <!-- Remember & Forgot Password -->
-                    <div class="flex items-center justify-between text-sm">
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox"
-                                class="rounded border-gray-300 dark:border-neutral-600 text-purple-600 focus:ring-purple-500">
-                            Remember me
-                        </label>
-                        <a href="#" class="text-purple-600 dark:text-purple-400 hover:underline">Forgot password?</a>
+                    <!-- Confirm Password -->
+                    <div>
+                        <label for="password_confirmation" class="block text-sm font-medium mb-1">Confirm
+                            Password</label>
+                        <input type="password" id="password_confirmation" name="password_confirmation" required
+                            class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:outline-none">
                     </div>
 
                     <!-- Submit -->
                     <button type="submit"
                         class="w-full py-2 rounded-lg bg-purple-600 text-white font-medium hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:outline-none">
-                        Login
+                        Sign Up
                     </button>
                 </form>
 
@@ -92,28 +95,29 @@
                     <hr class="flex-1 border-gray-300 dark:border-neutral-700">
                 </div>
 
-                <!-- Social Login -->
+                <!-- Social Register -->
                 <div class="w-full space-y-3">
                     <button
                         class="w-full flex items-center justify-center gap-2 py-2 rounded-lg border border-gray-300 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700">
                         <i class="fa-brands fa-google text-red-500 text-lg"></i>
-                        <span class="text-sm font-medium">Continue with Google</span>
+                        <span class="text-sm font-medium">Sign up with Google</span>
                     </button>
                     <button
                         class="w-full flex items-center justify-center gap-2 py-2 rounded-lg border border-gray-300 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700">
                         <i class="fa-brands fa-facebook text-blue-600 text-lg"></i>
-                        <span class="text-sm font-medium">Continue with Facebook</span>
+                        <span class="text-sm font-medium">Sign up with Facebook</span>
                     </button>
                 </div>
 
-                <!-- Sign Up -->
+                <!-- Already have an account -->
                 <p class="text-sm text-gray-500 dark:text-gray-400 mt-6">
-                    Don’t have an account?
-                    <a href="registration-form.html"
-                        class="text-purple-600 dark:text-purple-400 font-medium hover:underline">Sign up</a>
+                    Already have an account?
+                    <a href="login-form.html"
+                        class="text-purple-600 dark:text-purple-400 font-medium hover:underline">Login</a>
                 </p>
             </section>
-
         </main>
     </div>
 </body>
+
+</html>
