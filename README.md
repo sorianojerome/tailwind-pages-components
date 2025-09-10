@@ -1,7 +1,9 @@
 # Tailwind Pages & Components (Mobile UI/UX)
 
 A collection of **mobile-first UI pages and components** built with Tailwind CSS.  
-Designed for **mobile app layouts** with a fixed mobile width, making it easy to build mobile apps, PWAs, or responsive prototypes.
+Designed for **mobile app layouts** with a fixed mobile width, making it easy to build mobile apps, PWAs, or responsive prototypes. Checkout the example from this below:
+
+[EXAMPLES](https://sorianojerome.github.io/tailwind-pages-components/)
 
 ## 📱 Features
 - Mobile-first layouts (fixed mobile screen width)
