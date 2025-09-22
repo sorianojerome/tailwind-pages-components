@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Tailwind Pages and Components</title>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-neutral-950 dark:text-white flex justify-center">
+    <!-- Mobile container -->
+    <div
+        class="w-full max-w-sm min-h-screen flex flex-col relative border-x border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+        <!-- AppBar -->
+        <header
+            class="flex items-center justify-between px-2 h-12 border-b border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+
+            <!-- Left: Back Button -->
+            <div class="w-10 flex justify-start">
+                <button onclick="window.history.back()"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 focus:outline-none">
+                    <span
+                        class="material-icons text-gray-700 dark:text-gray-200 text-base leading-none">arrow_back</span>
+                </button>
+            </div>
+
+            <!-- Center: Title -->
+            <h1 class="flex-1 text-center text-base font-semibold text-gray-800 dark:text-gray-100">
+                Components - Badges
+            </h1>
+
+            <!-- Right: Empty placeholder (for symmetry, e.g. actions later) -->
+            <div class="w-10"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 pb-32 sm:pb-4">
+            <!-- Section: Buttons -->
+            <div class="flex flex-wrap gap-2">
+                <button
+                    class="px-3 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    Primary
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg bg-gray-600 text-white text-sm font-medium hover:bg-gray-700 focus:ring-2 focus:ring-gray-400 focus:outline-none">
+                    Secondary
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700 focus:ring-2 focus:ring-green-400 focus:outline-none">
+                    Success
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg bg-red-600 text-white text-sm font-medium hover:bg-red-700 focus:ring-2 focus:ring-red-400 focus:outline-none">
+                    Danger
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg bg-yellow-500 text-white text-sm font-medium hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                    Warning
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg bg-teal-500 text-white text-sm font-medium hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none">
+                    Info
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg bg-gray-100 text-gray-800 text-sm font-medium border border-gray-300 hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 focus:outline-none">
+                    Light
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium hover:bg-black focus:ring-2 focus:ring-gray-700 focus:outline-none">
+                    Dark
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg text-blue-600 text-sm font-medium hover:underline focus:outline-none">
+                    Link
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Section: Outline Buttons -->
+            <div class="flex flex-wrap gap-2">
+                <button
+                    class="px-3 py-2 rounded-lg border border-blue-600 text-blue-600 text-sm font-medium hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    Primary
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg border border-gray-600 text-gray-600 text-sm font-medium hover:bg-gray-50 focus:ring-2 focus:ring-gray-400 focus:outline-none">
+                    Secondary
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg border border-green-600 text-green-600 text-sm font-medium hover:bg-green-50 focus:ring-2 focus:ring-green-400 focus:outline-none">
+                    Success
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg border border-red-600 text-red-600 text-sm font-medium hover:bg-red-50 focus:ring-2 focus:ring-red-400 focus:outline-none">
+                    Danger
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-medium hover:bg-yellow-50 focus:ring-2 focus:ring-yellow-400 focus:outline-none">
+                    Warning
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg border border-teal-500 text-teal-500 text-sm font-medium hover:bg-teal-50 focus:ring-2 focus:ring-teal-400 focus:outline-none">
+                    Info
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 text-sm font-medium hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 focus:outline-none">
+                    Light
+                </button>
+                <button
+                    class="px-3 py-2 rounded-lg border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-100 focus:ring-2 focus:ring-gray-700 focus:outline-none">
+                    Dark
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Disabled Large Buttons -->
+            <div class="flex flex-wrap gap-2">
+                <button type="button" disabled
+                    class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium opacity-50 cursor-not-allowed">
+                    Primary button
+                </button>
+                <button type="button" disabled
+                    class="px-4 py-2 rounded-lg bg-gray-600 text-white text-sm font-medium opacity-50 cursor-not-allowed">
+                    Button
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+            <!-- Block Buttons -->
+            <div class="flex flex-col gap-2">
+                <button type="button"
+                    class="w-full px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    Button
+                </button>
+                <button type="button"
+                    class="w-full px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    Button
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <hr class="bottom-0 my-4 border-gray-200 dark:border-neutral-800">
+
+
+        </main>
+    </div>
+</body>
